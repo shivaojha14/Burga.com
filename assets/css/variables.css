@@ -1,0 +1,52 @@
+/* Project design tokens */
+:root {
+    --bg: #f8fbff;
+    --surface: #ffffff;
+    --surface-muted: #f1f7ff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: rgba(15, 23, 42, 0.12);
+    --border-strong: rgba(15, 23, 42, 0.18);
+    --primary: #111111;
+    --primary-soft: #f8fafc;
+    --accent: #00b67a;
+    --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+    --radius: 999px;
+    --radius-card: 28px;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 4rem;
+    --max-width: 1120px;
+}
+
+body {
+    background: radial-gradient(circle at top, rgba(37, 99, 235, 0.08), transparent 32%), var(--bg);
+}
+
+.container {
+    width: min(var(--max-width), calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.center-center {
+    align-items: center;
+    justify-content: center;
+}

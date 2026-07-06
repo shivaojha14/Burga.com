@@ -1,0 +1,459 @@
+/* Header styling and layout */
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.mh__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    width: min(var(--max-width), calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.mh__lhs,
+.mh__rhs,
+.mh__center {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.mh__lhs,
+.mh__rhs {
+    flex: 0 0 auto;
+}
+
+.mh__lhs {
+    justify-content: flex-start;
+    min-width: 0;
+}
+
+.mh__center {
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.mh__rhs {
+    justify-content: flex-end;
+}
+
+.mh__button {
+    width: 2.75rem;
+    height: 2.75rem;
+
+
+    background: var(--surface-muted);
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.mh__button:hover {
+    transform: translateY(-1px);
+    background: rgba(15, 23, 42, 0.06);
+    border-color: rgba(15, 23, 42, 0.18);
+}
+
+.mh__button--menu::before {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 0.12rem;
+    background: currentColor;
+    box-shadow: 0 0.22rem 0 0 currentColor, 0 -0.22rem 0 0 currentColor;
+}
+
+
+
+.mh__button--news {
+    position: relative;
+}
+
+
+
+.mh__button--news::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -0.35rem;
+    right: -0.35rem;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    padding: 0 0.2rem;
+    border-radius: 999px;
+    background: #ef4444;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+
+.mh__button--cart .mh__cart-counter {
+    position: absolute;
+    top: -0.35rem;
+    right: -0.35rem;
+}
+
+.mh__logo {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0;
+    margin: 0 1rem;
+}
+
+.mh__logo svg {
+    display: block;
+    width: 151px;
+    height: auto;
+}
+
+global-ux-context-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    letter-spacing: 0.22em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+global-ux-context-toggle a {
+    color: var(--text);
+    font-size: 0.92rem;
+
+}
+
+global-ux-context-toggle a:hover,
+global-ux-context-toggle a.active {
+    background: var(--text);
+    color: #ffffff;
+}
+
+globalization-toggle,
+.ter-toggle,
+.mh__model-select {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.ter-select-item {
+    display: block;
+    line-height: 1;
+}
+
+.mh__rhs .block-rel {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.mh__rhs .block-rel>* {
+    min-width: 0;
+}
+
+.mh__cart-counter {
+    min-width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 999px;
+    background: #ef4444;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    padding: 0 0.25rem;
+}
+
+/* Header styling and layout (reordered for clarity)
+   Changes: rules reordered and duplicates merged. No property values changed. */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+/* Header grid / regions */
+.mh__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    width: min(var(--max-width), calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.mh__lhs,
+.mh__rhs,
+.mh__center {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.mh__lhs,
+.mh__rhs {
+    flex: 0 0 auto;
+}
+
+.mh__lhs {
+    justify-content: flex-start;
+    min-width: 0;
+}
+
+.mh__center {
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.mh__rhs {
+    justify-content: flex-end;
+}
+
+/* Logo */
+.mh__logo {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0;
+    margin: 0 1rem;
+}
+
+.mh__logo svg {
+    display: block;
+    width: 151px;
+    height: auto;
+}
+
+/* Buttons and controls */
+.mh__button {
+    width: 2.75rem;
+    height: 2.75rem;
+    background: var(--surface-muted);
+    color: var(--text);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.mh__button:hover {
+    transform: translateY(-1px);
+    background: rgba(15, 23, 42, 0.06);
+    border-color: rgba(15, 23, 42, 0.18);
+}
+
+.mh__button--menu::before {
+    content: '';
+    display: block;
+    width: 1rem;
+    height: 0.12rem;
+    background: currentColor;
+    box-shadow: 0 0.22rem 0 0 currentColor, 0 -0.22rem 0 0 currentColor;
+}
+
+.mh__button--news {
+    position: relative;
+}
+
+.mh__button--news::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -0.35rem;
+    right: -0.35rem;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    padding: 0 0.2rem;
+    border-radius: 999px;
+    background: #ef4444;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+.mh__button--cart .mh__cart-counter {
+    position: absolute;
+    top: -0.35rem;
+    right: -0.35rem;
+}
+
+.mh__cart-counter {
+    min-width: 1.35rem;
+    height: 1.35rem;
+    border-radius: 999px;
+    background: #ef4444;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    padding: 0 0.25rem;
+}
+
+/* Small notification badge (separate from cart counter) */
+.notification-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #ff3b30;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* Icon sizing */
+.icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+    color: currentColor;
+}
+
+.mh__button:hover .icon {
+    color: #578F63;
+}
+
+.mh__button:hover .icon-search {
+    color: #578F63;
+}
+
+/* Global context toggle (UX toggle) */
+global-ux-context-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    letter-spacing: 0.22em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+global-ux-context-toggle a {
+    color: var(--text);
+    font-size: 0.92rem;
+}
+
+global-ux-context-toggle a:hover,
+global-ux-context-toggle a.active {
+    background: var(--text);
+    color: #ffffff;
+}
+
+/* Region/model controls */
+globalization-toggle,
+.ter-toggle,
+.mh__model-select {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.ter-select-item {
+    display: block;
+    line-height: 1;
+}
+
+.mh__rhs .block-rel {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.mh__rhs .block-rel>* {
+    min-width: 0;
+}
+
+/* Footer logo (kept here for convenience) */
+.footer-logo {
+    width: 130px;
+    align-items: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+    .mh__main {
+        padding: 0.85rem 0;
+        gap: 0.75rem;
+    }
+
+    .mh__center {
+        order: 3;
+    }
+
+    .mh__lhs,
+    .mh__rhs {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 760px) {
+    .mh__main {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.75rem 0;
+    }
+
+    .mh__logo {
+        margin: 0;
+    }
+
+    .mh__lhs,
+    .mh__rhs,
+    .mh__center {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mh__center {
+        order: 2;
+    }
+
+    .mh__lhs {
+        order: 1;
+    }
+
+    .mh__rhs {
+        order: 3;
+    }
+
+    global-ux-context-toggle {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

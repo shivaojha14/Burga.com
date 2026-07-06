@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burga Clone</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/variables.css" />
+    <link rel="stylesheet" href="assets/css/topbar.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/hero.css" />
+    <link rel="stylesheet" href="assets/css/products.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+
+    <section class="announcement-bar" aria-label="Announcement">
+        <div class="announcement-bar">
+            <div class="announcement-bar__inner">
+                <button class="announcement-bar__control"></button>
+
+                <div class="announcement-bar__slider-wrapper">
+                    <div class="announcement-bar__slider">
+                        <p class="announcement-bar__slide">
+                            Free standard shipping for orders over $100 |BURGA Special: Buy 4 Phone Cases—Pay For 2
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <header class="site-header">
+
+
+        <div class="container mh__main grid block-rel">
+            <div class="mh__lhs flex row-wrap align-center justify-left cell-l--s cell-r--s">
+                <button aria-label="Open Menu"
+                    class="js-global-sidebar-nav__toggle mh__button mh__button--menu btn-reset"></button>
+                <button aria-label="Search"
+                    class="mh__button mh__button--search btn-reset js-wbsk-sidebar-search__open">
+
+                    <svg class="icon icon-search" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path fill="currentColor"
+                            d="M10.5 3a7.5 7.5 0 1 1 0 15a7.5 7.5 0 0 1 0-15zm0 2a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11zm7.71 11.29l2.5 2.5a1 1 0 1 1-1.42 1.42l-2.5-2.5a1 1 0 0 1 1.42-1.42z" />
+                    </svg>
+
+                </button>
+            </div>
+
+            <div class="mh__center flex row-wrap align-center justify-center">
+                <global-ux-context-toggle
+                    class="@mobile__hide t-ucase f-w600 flex row-wrap align-center justify-center tac"
+                    ux_context="female" template_type="index">
+                    <a href="/" class="active block-grow-1 block-rel cell-l cell-r ct--s cb--s" ux_context="female"
+                        ux_context_overide="">Women</a>
+                    <a href="/?view=men" class="block-grow-1 block-rel cell-l cell-r ct--s cb--s" ux_context="male"
+                        ux_context_overide="">Men</a>
+                </global-ux-context-toggle>
+
+                <a href="/" class="footer-brand" aria-label="Home">
+                    <svg class="footer-logo" viewBox="0 0 151 19" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+                        <path
+                            d="M6.5115,7.19c.135-.004.287-.01.456-.018.34-.017.673-.088.996-.213.324-.125.605-.325.844-.599.238-.275.357-.663.357-1.163,0-.549-.2-1.02-.6-1.412-.393-.384-1.077-.579-2.053-.586h-.055-1.125-.331-1.73v3.999 3.198 4.898h1.73 1.506.257c.17,0,.451-.012.843-.037.391-.026.783-.113,1.175-.263.392-.15.741-.391 1.047-.725.307-.333.46-.799.46-1.399,0-.183-.034-.416-.102-.7-.068-.283-.226-.553-.472-.812-.248-.258-.597-.483-1.048-.674-.451-.192-1.06-.288-1.827-.288h-.328v-3.205zM1.5005,0h1.77 1.96c.528,0,1.051.008,1.571.025.52.016 1.026.066 1.52.15.494.083.971.224 1.43.424.461.2.895.475 1.304.825.476.416.864.937 1.162 1.562.298.624.447 1.253.447 1.886 0,.584-.081 1.079-.243 1.488-.161.407-.358.749-.587 1.024-.23.275-.464.492-.703.65-.238.158-.434.279-.587.362.306.117.651.275 1.034.475.383.2.737.475 1.06.825.324.349.596.791.818 1.324.221.533.332 1.191.332 1.974,0,.55-.068 1.054-.204 1.512-.136.458-.315.866-.537 1.224-.221.359-.472.675-.753.95-.281.275-.567.512-.856.712-.358.25-.754.446-1.188.588-.434.141-.877.249-1.328.324-.452.075-.882.125-1.291.15-.408.025-.766.038-1.073.038h-3.288-1.77-1.5v-18.492z"
+                            fill="currentColor" />
+
+                        <path
+                            d="M69.2365,8.9558h1.414.785c.7,0 1.266-.104 1.699-.312.433-.209.771-.459 1.012-.75.242-.292.4-.6.475-.925.075-.324.113-.612.113-.862,0-.25-.046-.537-.138-.862-.091-.325-.262-.633-.512-.924-.25-.292-.587-.534-1.012-.725-.425-.192-.971-.288-1.637-.288h-.785-1.414-3.424v-3.198h5.673c1.066,0 1.949.1 2.649.3.7.2 1.316.516 1.849.949.267.217.529.471.787.762.259.292.492.625.7 1 .208.375.375.787.5 1.237.125.45.187.941.187 1.474 0 .3-.029.642-.087 1.025-.059.383-.158.775-.3 1.175-.142.399-.325.791-.55 1.174-.225.383-.504.733-.837 1.05-.55.533-1.083.891-1.6 1.074-.516.183-1.007.333-1.474.45l5.023 6.822h-4.148l-6.66-9.646h1.712z"
+                            fill="currentColor" />
+
+                        <path
+                            d="M106.1649,8.5994h6.576.064.064v.063.976 8.976.045l-.044.015c-2.841.924-7.074 1.463-9.943.361-3.686-1.415-4.907-5.005-4.907-8.641 0-8.373 7.515-11.377 14.767-8.149l-1.257 2.941c-4.858-2.1-10.289-1.06-10.289 5.235 0 1.085.089 2.032.336 2.854 1.194 3.389 4.093 3.296 7.011 3.016.36-.034.727-.059 1.077-.153l.011-3.333h-3.466v-.6-.063-2.503l.001-.063z"
+                            fill="currentColor" />
+
+                        <path
+                            d="M42.899,0.2473v11.401c0 .113-.004.253-.012.418-.009.166-.021.354-.037.563-.017.215-.054.43-.112.645-.058.215-.136.43-.235.645-.2.432-.515.81-.947 1.134-.218.163-.481.286-.79.367-.306.081-.658.121-1.053.121-.254.008-.499.012-.744.012-.245 0-.489-.004-.744-.012-.395 0-.746-.04-1.053-.121-.308-.081-.572-.204-.79-.367-.215-.162-.402-.337-.559-.525-.158-.19-.288-.393-.387-.609-.1-.215-.178-.43-.236-.644-.058-.216-.095-.431-.112-.646-.016-.209-.028-.397-.036-.563-.008-.165-.013-.305-.013-.418v-11.401h-3.215v11.401c0 .559.029 1.064.085 1.517.057.452.141.85.254 1.196.112.346.234.654.363.925h-.001c.128.268.265.499.409.691.096.128.208.261.337.4.13.14.275.284.435.433.16.148.336.292.529.431.191.139.398.273.619.402.221.129.459.247.713.353.253.107.523.203.81.287.863.256 1.626.255 2.497.255h.101.091c.875 0 1.633 0 2.495-.255.287-.084.557-.18.811-.287.253-.106.491-.224.712-.353.221-.129.428-.273.62-.402.192-.139.368-.283.528-.431.16-.148.336-.292.528-.433.13-.139.243-.272.338-.4.289-.385.546-.923.772-1.616.112-.346.197-.744.253-1.196.057-.453.085-.958.085-1.517v-11.401z"
+                            fill="currentColor" />
+
+                        <path
+                            d="M144.0255,0.1097 151.3645,18.4377 151.4325,18.6017h-3.448-.406l-5.337-13.939-5.343 13.939h-.416-3.446l7.405-18.492z"
+                            fill="currentColor" />
+
+                    </svg>
+                </a>
+
+
+
+                <div class="mh__rhs flex row-wrap align-center justify-right block-r cell-l--s cell-r--s">
+                    <globalization-toggle class="ter-toggle @tablet__hide flex align-center">
+                        <span class="ter-select-item ter-select-item--ter-toggle d-block"
+                            data-wbsk-ter-select-id="global-usd">USD</span>
+                    </globalization-toggle>
+                    <div class="mh__model-select cell-l--s @tablet__hide">
+                        <global-phone-model-selector-toggle
+                            class="btn-reset wbsk-ui-option-toggle proxy-selector"><span>iPhone 17
+                                Pro</span></global-phone-model-selector-toggle>
+                    </div>
+                    <div class="block-rel flex row-wrap align-center justify-right cell-l--s cell-r--s @mobile__cell-m">
+                        <button class="js-news-center-toggle btn-reset mh__button mh__button--news"
+                            aria-label="Notifications" data-count="7">
+
+                            <svg class="icon icon-bell" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true">
+                                <path fill="currentColor"
+                                    d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22zm7-3H5v-1l2-2v-5a5 5 0 0 1 4-4.9V5a1 1 0 1 1 2 0v1.1A5 5 0 0 1 17 11v5l2 2v1z" />
+                            </svg>
+
+                            <span class="notification-badge">7</span>
+                        </button>
+                        <a href="https://burga.com/account"
+                            class="js-mh__account-link mh__button mh__button--account flex @mobile__hide"
+                            aria-label="account">
+                            <svg class="icon icon-account" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true">
+                                <g transform="translate(-4.196 0)" fill="currentColor">
+                                    <path
+                                        d="M54.196 0C71.869 0 86.196 14.327 86.196 32S71.869 64 54.196 64 22.196 49.673 22.196 32 36.523 0 54.196 0zm0 5C39.284 5 27.196 17.088 27.196 32S39.284 59 54.196 59 81.196 46.912 81.196 32 69.107 5 54.196 5z" />
+                                    <path
+                                        d="M54.196 60.5C84.295 60.5 107.806 84.599 108.273 115.075L108.281 116H103.281c0-28.191-21.486-50.5-49.085-50.5-27.346 0-48.764 21.889-49.19 49.657L5 116H0C0 85.11 23.773 60.5 54.196 60.5z" />
+                                </g>
+                            </svg>
+                        </a>
+                        <button aria-label="Open Cart"
+                            class="js-wbsk-sidebar-cart__open mh__button mh__button--cart btn-reset block-rel js-wbsk-sidebar-cart__cart-count-parent">
+                            <svg class="icon icon-cart" viewBox="0 0 36.04 41.04" xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true">
+                                <path fill="currentColor"
+                                    d="M33.02 8.98h-7.2C24.9 3.75 21.82 0 18.02 0s-6.89 3.75-7.81 8.98H3.02L0 41.04h36.04ZM12.25 8.98c.82-4 3.12-7 5.75-7s4.92 3 5.75 7Z" />
+                            </svg>
+                            <span class="mh__cart-counter block-abc js-wbsk-sidebar-cart__cart-count">0</span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="shopify-section-header" class="shopify-section mh__links tac">
+            <div
+                class="js-wbsk-header-main-nav embla header-main-nav d-iblock t-ucase ct--xs cb--xs t-s cell-l cell-r lh-m f-w500 block-c block-max-12/12 @mobile__hide">
+                <nav class="embla__container">
+                    <a href="https://burga.com/collections/all" class="embla__slide embla__slide--auto cell-r">Phone
+                        Cases</a>
+                    <a href="https://burga.com/collections/magnetic-power-banks"
+                        class="embla__slide embla__slide--auto cell-r">Charging</a>
+                    <a href="https://burga.com/collections/magnetic-ring-holders"
+                        class="embla__slide embla__slide--auto cell-r">Ring Holders</a>
+                    <a href="https://burga.com/collections/leakproof-tumblers"
+                        class="embla__slide embla__slide--auto cell-r">Drinkware</a>
+                    <a href="https://burga.com/collections/airpods-4-cases"
+                        class="embla__slide embla__slide--auto cell-r">Earbuds Cases</a>
+                    <a href="https://burga.com/collections/ipad-cases"
+                        class="embla__slide embla__slide--auto cell-r">Tablet
+                        Cases</a>
+                    <a href="https://burga.com/collections/kindle-cases"
+                        class="embla__slide embla__slide--auto cell-r">Kindle Cases</a>
+                    <a href="https://burga.com/collections/hard-macbook-cases"
+                        class="embla__slide embla__slide--auto cell-r">Laptop Protection</a>
+                    <a href="https://burga.com/collections/watch-bands"
+                        class="embla__slide embla__slide--auto cell-r">Watch
+                        Bands</a>
+                    <a href="https://burga.com/collections/phone-straps"
+                        class="embla__slide embla__slide--auto cell-r">Phone Straps</a>
+                    <a href="https://burga.com/collections/notebooks"
+                        class="embla__slide embla__slide--auto cell-r">Notebooks &amp; Planners</a>
+                    <a href="/pages/bundles" class="embla__slide embla__slide--auto cell-r"
+                        ux_context_overide="">Bundles</a>
+                    <a href="/pages/accessories" class="embla__slide embla__slide--auto cell-r"
+                        ux_context_overide="">Accessories</a>
+                    <a href="https://burga.com/collections/screen-protectors"
+                        class="embla__slide embla__slide--auto cell-r">Screen Protectors</a>
+                    <a href="/pages/clearance" class="embla__slide embla__slide--auto cell-r"
+                        ux_context_overide="">Clearance</a>
+                </nav>
+            </div>
+    </header>
+
+
+
+
+
+    <!-- main section  -->
+
+    <main>
+        <div id="shopify-section-template--25884333113680__hero" class="shopify-section" id="home">
+            <div
+                class="js-carousel-hero-template--25884333113680__hero embla hero-carousel block-rel @tablet__row--none">
+                <ul class="embla__container">
+                    <li class="embla__slide hero-slide">
+                        <div class="block-rel">
+                            <img src="//burga.com/cdn/shop/files/Pacific-2026-Hero-Burga-Women-Dekstop_EN.webp?v=1782373709&amp;width=2048"
+                                alt="Pacific hero" class="hero-image d-block @tablet__hide" />
+                            <a href="https://burga.com/pages/pacific" aria-label="Slide 1" class="hero-slide-link"
+                                data-promotion-name="Homepage - hero image">
+                            </a>
+                        </div>
+                    </li>
+                    <li class="embla__slide hero-slide">
+                        <div class="block-rel">
+                            <img src="//burga.com/cdn/shop/files/2-Evergreen-Bundle-2026-hero-banner-EN_Desktop.jpg?v=1778165609&amp;width=2048"
+                                alt="Evergreen bundle hero" class="hero-image d-block @tablet__hide" />
+
+                            <a href="https://burga.com/pages/bundles" aria-label="Slide 2" class="hero-slide-link"
+                                data-promotion-name="Homepage - hero image">
+                            </a>
+                        </div>
+                    </li>
+                    <li class="embla__slide hero-slide">
+                        <div class="block-rel">
+                            <img src="//burga.com/cdn/shop/files/summer-26-evergreen-Dekstop_Hero_EN.webp?v=1780554377&amp;width=2048"
+                                alt="Summer hero" class="hero-image d-block @tablet__hide" />
+
+                            <a href="https://burga.com/pages/summer-bestsellers" aria-label="Slide 3"
+                                class="hero-slide-link" data-promotion-name="Homepage - hero image">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+                <div
+                    class="hero-pagination embla__pagination embla__pagination--index-slideshow embla__pagination--lined">
+                    <button class="embla__dot" aria-label="Slide 1" type="button"></button>
+                    <button class="embla__dot embla__dot--selected" aria-label="Slide 2" type="button"></button>
+                    <button class="embla__dot" aria-label="Slide 3" type="button"></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="shopify-section-template--25884333113680__post-hero-bar" class="shopify-section">
+
+            <div class="block-12/12 ct cb tac" style="
+        background-color:#111111;
+        color:#eaeaea;
+      
+    ">
+                <div class="flex row-wrap align-center justify-center lh-m cell-l--xs cell-r--xs flex-grid--xs t-s">
+                    Love it? Get it: Buy 4 Phone Cases—Pay For 2 | No Code Needed
+                </div>
+            </div>
+        </div>
+
+        <div id="shopify-section-template--25884333113680__index_quick_shop_bubbles_NHqDw6"
+            class="shopify-section quick-shop-bubbles-section">
+            <div class="bg-grey ct  tac t-ucase  f-w500  ct--s cb--s @mobile__hide t-xs t-black block-rel block-oh">
+                <div
+                    class="js-qsb__template--25884333113680__index_quick_shop_bubbles_NHqDw6 grid--f quick-link-wrapper embla">
+                    <div class="embla__container" style="transform: translate3d(0px, 0px, 0px);">
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/all" aria-label="View Phone Cases"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Phone Cases" data-bubble-nav-position="1"
+                                    data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/b958bbd77c31--phone-cases.png?v=1742893415&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Phone Cases">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/collections/all" class="quick-link__text d-block lh-s"
+                                data-bubble-nav="Phone Cases" data-bubble-nav-position="1"
+                                data-bubble-nav-level="1">Phone Cases</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/magnetic-power-banks" aria-label="View Charging"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Charging" data-bubble-nav-position="2" data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/a0b838281709--image-4.png?v=1765529361&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Charging">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/collections/magnetic-power-banks"
+                                class="quick-link__text d-block lh-s" data-bubble-nav="Charging"
+                                data-bubble-nav-position="2" data-bubble-nav-level="1">Charging</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/magnetic-ring-holders"
+                                    aria-label="View Ring Holders"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Ring Holders" data-bubble-nav-position="3"
+                                    data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/7a7d9bbae5d4--magnetic-ringholder-sidebar-category-swticher-thumbnail.jpg?v=1752147265&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Ring Holders">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/collections/magnetic-ring-holders"
+                                class="quick-link__text d-block lh-s" data-bubble-nav="Ring Holders"
+                                data-bubble-nav-position="3" data-bubble-nav-level="1">Ring Holders</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/leakproof-tumblers" aria-label="View Drinkware"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Drinkware" data-bubble-nav-position="4" data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/b7a62b8dcf6b--Thumbler-Cup-Thumbnail.jpg?v=1750428529&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Drinkware">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/collections/leakproof-tumblers"
+                                class="quick-link__text d-block lh-s" data-bubble-nav="Drinkware"
+                                data-bubble-nav-position="4" data-bubble-nav-level="1">Drinkware</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/airpods-4-cases" aria-label="View Earbuds Cases"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Earbuds Cases" data-bubble-nav-position="5"
+                                    data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/f98cff7d1d24--Airpods4.png?v=1762759167&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Earbuds Cases">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/collections/airpods-4-cases"
+                                class="quick-link__text d-block lh-s" data-bubble-nav="Earbuds Cases"
+                                data-bubble-nav-position="5" data-bubble-nav-level="1">Earbuds Cases</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/ipad-cases" aria-label="View Tablet Cases"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Tablet Cases" data-bubble-nav-position="6"
+                                    data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/425cf272727e--tablet-cases.jpg?v=1732794945&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Tablet Cases">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/collections/ipad-cases" class="quick-link__text d-block lh-s"
+                                data-bubble-nav="Tablet Cases" data-bubble-nav-position="6"
+                                data-bubble-nav-level="1">Tablet Cases</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/kindle-cases" aria-label="View Kindle Cases"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Kindle Cases" data-bubble-nav-position="7"
+                                    data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/fea91a091ad0--Kindle-Case-Thumbnail.png?v=1742387338&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Kindle Cases">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/collections/kindle-cases" class="quick-link__text d-block lh-s"
+                                data-bubble-nav="Kindle Cases" data-bubble-nav-position="7"
+                                data-bubble-nav-level="1">Kindle Cases</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/hard-macbook-cases"
+                                    aria-label="View Laptop Protection"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Laptop Protection" data-bubble-nav-position="8"
+                                    data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/979283925e5c--Lapto-Protection-Thumbnail.png?v=1742891664&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Laptop Protection">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/collections/hard-macbook-cases"
+                                class="quick-link__text d-block lh-s" data-bubble-nav="Laptop Protection"
+                                data-bubble-nav-position="8" data-bubble-nav-level="1">Laptop Protection</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/watch-bands" aria-label="View Watch Bands"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Watch Bands" data-bubble-nav-position="9"
+                                    data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="//burga.com/cdn/shop/files/Watch-Thumbnail-menu.jpg?v=1778139445&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Watch Bands">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/collections/watch-bands" class="quick-link__text d-block lh-s"
+                                data-bubble-nav="Watch Bands" data-bubble-nav-position="9"
+                                data-bubble-nav-level="1">Watch Bands</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/phone-straps" aria-label="View Phone Straps"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Phone Straps" data-bubble-nav-position="10"
+                                    data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/f6ce73e1b46e--Ropes-navigation-thumb.jpg?v=1773757552&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Phone Straps">
+                                </a>
+                                <span style="background:#000000;color:#ffffff"
+                                    class="qs_bubbles__tag gbl-tag">NEW</span>
+                            </div>
+                            <a href="https://burga.com/collections/phone-straps" class="quick-link__text d-block lh-s"
+                                data-bubble-nav="Phone Straps" data-bubble-nav-position="10"
+                                data-bubble-nav-level="1">Phone Straps</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/notebooks"
+                                    aria-label="View Notebooks &amp; Planners"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Notebooks &amp; Planners" data-bubble-nav-position="11"
+                                    data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/9d8c5f0c85c7--notebooks.jpg?v=1732794606&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Notebooks &amp; Planners">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/collections/notebooks" class="quick-link__text d-block lh-s"
+                                data-bubble-nav="Notebooks &amp; Planners" data-bubble-nav-position="11"
+                                data-bubble-nav-level="1">Notebooks &amp; Planners</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/pages/bundles" aria-label="View Bundles"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Bundles" data-bubble-nav-position="12" data-bubble-nav-level="1"
+                                    ux_context_overide="">
+                                    <img width="150" height="150"
+                                        src="//burga.com/cdn/shop/files/Bundles-thumb-female.avif?v=1770370709&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Bundles">
+                                </a>
+                                <span style="background:#fa5d5c;color:#ffffff"
+                                    class="qs_bubbles__tag gbl-tag">SAVE</span>
+                            </div>
+                            <a href="https://burga.com/pages/bundles" class="quick-link__text d-block lh-s"
+                                data-bubble-nav="Bundles" data-bubble-nav-position="12"
+                                data-bubble-nav-level="1">Bundles</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/pages/accessories" aria-label="View Accessories"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Accessories" data-bubble-nav-position="13"
+                                    data-bubble-nav-level="1" ux_context_overide="">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/c4406320d705--accessories-thumb.png?v=1774948520&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Accessories">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/pages/accessories" class="quick-link__text d-block lh-s"
+                                data-bubble-nav="Accessories" data-bubble-nav-position="13"
+                                data-bubble-nav-level="1">Accessories</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/collections/screen-protectors"
+                                    aria-label="View Screen Protectors"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Screen Protectors" data-bubble-nav-position="14"
+                                    data-bubble-nav-level="1">
+                                    <img width="150" height="150"
+                                        src="https://cdn.shopify.com/s/files/1/2100/2577/t/31/assets/53ad3412bb7a--Screen-Protectors.png?v=1758790629&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Screen Protectors">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/collections/screen-protectors"
+                                class="quick-link__text d-block lh-s" data-bubble-nav="Screen Protectors"
+                                data-bubble-nav-position="14" data-bubble-nav-level="1">Screen Protectors</a>
+                        </div>
+                        <div class="embla__slide embla__slide--auto quick-link block-rel">
+                            <div class="d-iblock block-rel">
+                                <a href="https://burga.com/pages/clearance" aria-label="View Clearance"
+                                    class="quick-link__img d-block far-image far-image--square far-image--round block-rel row--xs block-c"
+                                    data-bubble-nav="Clearance" data-bubble-nav-position="15" data-bubble-nav-level="1"
+                                    ux_context_overide="">
+                                    <img width="150" height="150"
+                                        src="//burga.com/cdn/shop/files/Clearance-thumb-female.avif?v=1770370709&amp;width=128"
+                                        preload="false" loading="lazy" alt="View Clearance">
+                                </a>
+                            </div>
+                            <a href="https://burga.com/pages/clearance" class="quick-link__text d-block lh-s"
+                                data-bubble-nav="Clearance" data-bubble-nav-position="15"
+                                data-bubble-nav-level="1">Clearance</a>
+                        </div>
+                    </div>
+                    <button aria-label="Next slide"
+                        class="@mobile__hide js-qsb__template--25884333113680__index_quick_shop_bubbles_NHqDw6__next btn-reset carousel-nav-control carousel-nav-control--qls carousel-nav-control--next">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 69">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #fff;
+                                    }
+                                </style>
+                            </defs>
+                            <path class="cls-1"
+                                d="M34.5.59A34.51,34.51,0,1,0,69,35.09,34.5,34.5,0,0,0,34.5.59ZM26.75,59.87,25,58.1l23-23-23-23,1.77-1.77L51.52,35.09Z"
+                                transform="translate(0 -0.59)"></path>
+                        </svg>
+                    </button>
+                    <button aria-label="Previous slide"
+                        class="@mobile__hide js-qsb__template--25884333113680__index_quick_shop_bubbles_NHqDw6__prev btn-reset carousel-nav-control carousel-nav-control--qls carousel-nav-control--prev carousel-nav-control--prev-rotate"
+                        disabled="disabled">
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 69 69">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #fff;
+                                    }
+                                </style>
+                            </defs>
+                            <path class="cls-1"
+                                d="M34.5.59A34.51,34.51,0,1,0,69,35.09,34.5,34.5,0,0,0,34.5.59ZM26.75,59.87,25,58.1l23-23-23-23,1.77-1.77L51.52,35.09Z"
+                                transform="translate(0 -0.59)"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <!--  footer section       -->
+
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+
+            <!-- Brand strip -->
+            <div class="footer-logo">
+                <a aria-label="Home" href="https://burga.com/" class="footer-brand">
+                    <svg width="130" height="17" viewBox="0 0 151 19" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path
+                            d="M6.5115,7.19c.135-.004.287-.01.456-.018.34-.017.673-.088.996-.213.324-.125.605-.325.844-.599.238-.275.357-.663.357-1.163,0-.549-.2-1.02-.6-1.412-.393-.384-1.077-.579-2.053-.586h-.055-1.125-.331-1.73v3.999 3.198 4.898h1.73 1.506.257c.17,0,.451-.012.843-.037.391-.026.783-.113,1.175-.263.392-.15.741-.391 1.047-.725.307-.333.46-.799.46-1.399,0-.183-.034-.416-.102-.7-.068-.283-.226-.553-.472-.812-.248-.258-.597-.483-1.048-.674-.451-.192-1.06-.288-1.827-.288h-.328v-3.205zM1.5005,0h1.77 1.96c.528,0,1.051.008,1.571.025.52.016 1.026.066 1.52.15.494.083.971.224 1.43.424.461.2.895.475 1.304.825.476.416.864.937 1.162 1.562.298.624.447 1.253.447 1.886 0,.584-.081 1.079-.243 1.488-.161.407-.358.749-.587 1.024-.23.275-.464.492-.703.65-.238.158-.434.279-.587.362.306.117.651.275 1.034.475.383.2.737.475 1.06.825.324.349.596.791.818 1.324.221.533.332 1.191.332 1.974,0,.55-.068 1.054-.204 1.512-.136.458-.315.866-.537 1.224-.221.359-.472.675-.753.95-.281.275-.567.512-.856.712-.358.25-.754.446-1.188.588-.434.141-.877.249-1.328.324-.452.075-.882.125-1.291.15-.408.025-.766.038-1.073.038h-3.288-1.77-1.5v-18.492z"
+                            fill="currentColor" />
+                        <path
+                            d="M69.2365,8.9558h1.414.785c.7,0,1.266-.104,1.699-.312.433-.209.771-.459 1.012-.75.242-.292.4-.6.475-.925.075-.324.113-.612.113-.862,0-.25-.046-.537-.138-.862-.091-.325-.262-.633-.512-.924-.25-.292-.587-.534-1.012-.725-.425-.192-.971-.288-1.637-.288h-.785-1.414-3.424v-3.198h5.673c1.066,0 1.949.1 2.649.3.7.2 1.316.516 1.849.949.267.217.529.471.787.762.259.292.492.625.7 1,.208.375.375.787.5 1.237.125.45.187.941.187 1.474,0,.3-.029.642-.087 1.025-.059.383-.158.775-.3 1.175-.142.399-.325.791-.55 1.174-.225.383-.504.733-.837 1.05-.55.533-1.083.891-1.6 1.074-.516.183-1.007.333-1.474.45l5.023,6.822h-4.148l-6.66-9.646h1.712z"
+                            fill="currentColor" />
+                        <path
+                            d="M106.1649,8.5994h6.576.064.064v.063.976 8.976.045l-.044.015c-2.841.924-7.074 1.463-9.943.361-3.686-1.415-4.907-5.005-4.907-8.641 0-8.373 7.515-11.377 14.767-8.149l-1.257 2.941c-4.858-2.1-10.289-1.06-10.289 5.235 0 1.085.089 2.032.336 2.854 1.194 3.389 4.093 3.296 7.011 3.016.36-.034.727-.059 1.077-.153l.011-3.333h-3.466v-.6-.063-2.503l.001-.063z"
+                            fill="currentColor" />
+                        <path
+                            d="M42.899,0.2473v11.401c0 .113-.004.253-.012.418-.009.166-.021.354-.037.563-.017.215-.054.43-.112.645-.058.215-.136.43-.235.645-.2.432-.515.81-.947 1.134-.218.163-.481.286-.79.367-.306.081-.658.121-1.053.121-.254.008-.499.012-.744.012-.245,0-.489-.004-.744-.012-.395,0-.746-.04-1.053-.121-.308-.081-.572-.204-.79-.367-.215-.162-.402-.337-.559-.525-.158-.19-.288-.393-.387-.609-.1-.215-.178-.43-.236-.644-.058-.216-.095-.431-.112-.646-.016-.209-.028-.397-.036-.563-.008-.165-.013-.305-.013-.418v-11.401h-3.215v11.401c0 .559.029 1.064.085 1.517.057.452.141.85.254 1.196.112.346.234.654.363.925h-.001c.128.268.265.499.409.691.096.128.208.261.337.4.13.14.275.284.435.433.16.148.336.292.529.431.191.139.398.273.619.402.221.129.459.247.713.353.253.107.523.203.81.287.863.256 1.626.255 2.497.255h0 .101.091 0c.875,0 1.633,0 2.495-.255.287-.084.557-.18.811-.287.253-.106.491-.224.712-.353.221-.129.428-.273.62-.402.192-.139.368-.283.528-.431.16-.148.336-.292.528-.433.13-.139.243-.272.338-.4.289-.385.546-.923.772-1.616.112-.346.197-.744.253-1.196.057-.453.085-.958.085-1.517v-11.401z"
+                            fill="currentColor" />
+                        <path
+                            d="M144.0255,0.1097 151.3645,18.4377 151.4325,18.6017h-3.448-.406l-5.337-13.939-5.343 13.939h-.416-3.446l7.405-18.4920z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+                <p class="footer-tagline">Everyday essentials, turned fashion accessories.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/burgaofficial/">Instagram <span>1.4M</span></a>
+                    <a href="https://www.facebook.com/BurgaOfficial/">Facebook <span>420k</span></a>
+                    <a href="https://www.tiktok.com/@burgaofficial">TikTok <span>434k</span></a>
+                    <a href="https://www.youtube.com/@burgaofficial">YouTube <span>2.6M</span></a>
+                </div>
+            </div>
+
+            <!-- Products -->
+            <div class="footer-links">
+                <h3>Products</h3>
+                <a href="https://burga.com/collections/all">Phone Cases</a>
+                <a href="https://burga.com/collections/magnetic-power-banks">Charging</a>
+                <a href="https://burga.com/collections/magnetic-ring-holders">Ring Holders</a>
+                <a href="https://burga.com/collections/leakproof-tumblers">Drinkware</a>
+                <a href="https://burga.com/collections/airpods-4-cases">Earbuds Cases</a>
+                <a href="https://burga.com/collections/ipad-cases">Tablet Cases</a>
+                <a href="https://burga.com/collections/kindle-cases">Kindle Cases</a>
+                <a href="https://burga.com/collections/hard-macbook-cases">Laptop Protection</a>
+                <a href="https://burga.com/collections/watch-bands">Watch Bands</a>
+                <a href="https://burga.com/collections/phone-straps">Phone Straps</a>
+                <a href="https://burga.com/collections/notebooks">Notebooks &amp; Planners</a>
+                <a href="/pages/bundles">Bundles</a>
+                <a href="/pages/accessories">Accessories</a>
+                <a href="https://burga.com/collections/screen-protectors">Screen Protectors</a>
+                <a href="/pages/clearance">Clearance</a>
+            </div>
+
+            <!-- Contact & Info -->
+            <div class="footer-links">
+                <h3>Contact &amp; Info</h3>
+                <a href="https://account.burga.com/">My Account</a>
+                <a href="https://burga.com/pages/about-us">About Us</a>
+                <a href="/pages/faq">Help Center</a>
+                <a href="https://burga.com/pages/contact">Contact Us</a>
+                <a href="/pages/press">Press</a>
+                <a href="https://burga.com/blogs/news">Blog</a>
+                <a href="/pages/shipping-delivery">Shipping and Delivery</a>
+                <a href="/pages/reviews">Reviews</a>
+                <a href="/pages/careers">Careers</a>
+                <a href="/pages/partnerships-collaborations">Partnerships and Collaborations</a>
+                <a href="https://burga.com/pages/return-policy">Returns</a>
+            </div>
+
+            <!-- Region / model -->
+            <div class="footer-links footer-prefs">
+                <h3>Country/Region</h3>
+                <button type="button" class="footer-select">
+                    <span data-wbsk-ter-select-id="global-usd">Global / USD</span>
+                </button>
+
+                <h3 class="footer-prefs__second">Phone Model</h3>
+                <button type="button" class="footer-select">iPhone 17 Pro</button>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="footer-bottom">
+                <p>© <span id="footerYear"></span> BURGA — All rights reserved</p>
+
+                <div class="footer-bottom__legal">
+                    <a href="https://burga.com/pages/terms-conditions">Terms &amp; Conditions</a>
+                    <a href="https://burga.com/pages/privacy-policy">Privacy Policy</a>
+                </div>
+
+                <div class="footer-bottom__badges">
+                    <div class="footer-shipping-icons">
+                        <img src="//burga.com/cdn/shop/files/Footer-icons_DHL.svg?v=1728385844&width=128" alt="DHL"
+                            width="64" height="32" loading="lazy">
+                        <img src="//burga.com/cdn/shop/files/Footer-icons_DPD.svg?v=1728385852&width=128" alt="DPD"
+                            width="64" height="32" loading="lazy">
+                        <img src="//burga.com/cdn/shop/files/Footer-icons_FEDEX.svg?v=1728385856&width=128" alt="FedEx"
+                            width="64" height="32" loading="lazy">
+                        <img src="//burga.com/cdn/shop/files/Footer-icons_UPS.svg?v=1728385861&width=128" alt="UPS"
+                            width="64" height="32" loading="lazy">
+                    </div>
+
+                    <div class="footer-payment-icons" aria-hidden="true">
+                        <span class="pay-chip">VISA</span>
+                        <span class="pay-chip">MASTERCARD</span>
+                        <span class="pay-chip">AMEX</span>
+                        <span class="pay-chip">PAY</span>
+                    </div>
+
+                    <a href="https://www.dmca.com/Protection/Status.aspx?ID=1b102ad2-3c33-47f2-9593-ee153519ce0e"
+                        title="DMCA.com Protection Status" class="dmca-badge">
+                        <img src="https://cdn.shopify.com/s/files/1/2100/2577/files/DMC_PROTECTED.svg?v=1747033471"
+                            width="100" height="20" alt="DMCA.com Protection Status">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
