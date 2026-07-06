@@ -1,0 +1,73 @@
+/* ===============================
+   Instagram Section
+================================= */
+
+.instagram-section {
+    padding: 50px 0;
+    background: #f7f7f7;
+}
+
+.instagram-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.instagram-header a {
+    color: #111;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.instagram-header strong {
+    font-weight: 700;
+}
+
+.instagram-carousel {
+    width: 95%;
+    margin: auto;
+
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.instagram-card {
+    width: 280px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.instagram-card img {
+    width: 100%;
+    display: block;
+    transition: .4s;
+}
+
+.instagram-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+
+@media (max-width:992px) {
+
+    .instagram-card {
+        width: calc(50% - 20px);
+    }
+
+}
+
+@media (max-width:576px) {
+
+    .instagram-header a {
+        font-size: 18px;
+    }
+
+    .instagram-card {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,86 @@
+/* ===================================
+   Features Section
+=================================== */
+
+.features-section {
+    padding: 60px 20px;
+    background: #ffffff;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.features-container {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card {
+    text-align: center;
+    transition: transform .3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+}
+
+.feature-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+.feature-card p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #111;
+    margin: 0;
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width:992px) {
+
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:576px) {
+
+    .features-section {
+        padding: 45px 15px;
+    }
+
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 20px;
+    }
+
+    .feature-card img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+}

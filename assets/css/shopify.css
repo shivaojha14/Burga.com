@@ -1,0 +1,50 @@
+/* ==========================================
+   Post Hero Announcement Bar
+========================================== */
+
+.post-hero-bar {
+    background: #111111;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    /* NEW */
+    margin-top: -4px;
+    /* Remove white gap */
+    position: relative;
+    z-index: 2;
+}
+
+.post-hero-bar__content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    /* Slightly reduced */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    color: #f8fafc;
+}
+
+.post-hero-bar__content strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .post-hero-bar {
+        margin-top: -3px;
+    }
+
+    .post-hero-bar__content {
+        padding: 0.65rem 0.75rem;
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+}

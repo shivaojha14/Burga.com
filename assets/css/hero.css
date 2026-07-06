@@ -1,0 +1,131 @@
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+
+.hero-carousel .embla__container {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+    will-change: transform;
+}
+
+.hero-carousel .embla__slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    position: relative;
+}
+
+.hero-slide {
+    list-style: none;
+}
+
+.hero-slide .block-rel {
+    position: relative;
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hero-slide-link {
+    position: absolute;
+    inset: 0;
+    display: block;
+    z-index: 2;
+}
+
+/* ==========================================
+   HERO PAGINATION
+========================================== */
+
+.hero-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 20;
+}
+
+.embla__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,.5);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.embla__dot:hover {
+    background: rgba(255,255,255,.85);
+}
+
+.embla__dot--selected {
+    background: #ffffff;
+    transform: scale(1.2);
+}
+
+/* ==========================================
+   HERO HOVER
+========================================== */
+
+.hero-image{
+    transition:.4s;
+}
+
+.hero-slide:hover .hero-image{
+    transform:scale(1.02);
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width:991px){
+
+.hero-pagination{
+    bottom:18px;
+}
+
+.embla__dot{
+    width:10px;
+    height:10px;
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.hero-image{
+    min-height:220px;
+    object-fit:cover;
+}
+
+.hero-pagination{
+    gap:8px;
+    bottom:14px;
+}
+
+.embla__dot{
+    width:8px;
+    height:8px;
+}
+
+}
