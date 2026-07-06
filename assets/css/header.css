@@ -1,459 +1,354 @@
-/* Header styling and layout */
+/* ===========================
+   BURGA Header Clone
+=========================== */
+
 .site-header {
-    background: #ffffff;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
     position: sticky;
     top: 0;
-    z-index: 50;
+    z-index: 999;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
 }
 
+/* Main Header */
+
 .mh__main {
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+    height: 86px;
+    padding: 0 22px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--spacing-md);
-    width: min(var(--max-width), calc(100% - 2rem));
-    margin: 0 auto;
-    padding: 1rem 0;
 }
 
-.mh__lhs,
-.mh__rhs,
-.mh__center {
-    display: flex;
-    align-items: center;
-    gap: 0.85rem;
-}
-
-.mh__lhs,
-.mh__rhs {
-    flex: 0 0 auto;
-}
+/* Left */
 
 .mh__lhs {
-    justify-content: flex-start;
-    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
+
+/* Center */
 
 .mh__center {
     flex: 1;
+    display: flex;
     justify-content: center;
-    min-width: 0;
-    flex-wrap: wrap;
-    gap: 1rem;
+    align-items: center;
+    gap: 50px;
 }
+
+/* Right */
 
 .mh__rhs {
-    justify-content: flex-end;
-}
-
-.mh__button {
-    width: 2.75rem;
-    height: 2.75rem;
-
-
-    background: var(--surface-muted);
-    color: var(--text);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
-}
-
-.mh__button:hover {
-    transform: translateY(-1px);
-    background: rgba(15, 23, 42, 0.06);
-    border-color: rgba(15, 23, 42, 0.18);
-}
-
-.mh__button--menu::before {
-    content: '';
-    display: block;
-    width: 1rem;
-    height: 0.12rem;
-    background: currentColor;
-    box-shadow: 0 0.22rem 0 0 currentColor, 0 -0.22rem 0 0 currentColor;
-}
-
-
-
-.mh__button--news {
-    position: relative;
-}
-
-
-
-.mh__button--news::after {
-    content: attr(data-count);
-    position: absolute;
-    top: -0.35rem;
-    right: -0.35rem;
-    min-width: 1.25rem;
-    height: 1.25rem;
-    padding: 0 0.2rem;
-    border-radius: 999px;
-    background: #ef4444;
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.65rem;
-    font-weight: 700;
-}
-
-
-.mh__button--cart .mh__cart-counter {
-    position: absolute;
-    top: -0.35rem;
-    right: -0.35rem;
-}
-
-.mh__logo {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.2rem 0;
-    margin: 0 1rem;
-}
-
-.mh__logo svg {
-    display: block;
-    width: 151px;
-    height: auto;
-}
-
-global-ux-context-toggle {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    letter-spacing: 0.22em;
-    font-weight: 700;
-    text-transform: uppercase;
+    gap: 14px;
 }
 
-global-ux-context-toggle a {
-    color: var(--text);
-    font-size: 0.92rem;
-
-}
-
-global-ux-context-toggle a:hover,
-global-ux-context-toggle a.active {
-    background: var(--text);
-    color: #ffffff;
-}
-
-globalization-toggle,
-.ter-toggle,
-.mh__model-select {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    border: 1px solid rgba(15, 23, 42, 0.12);
-    color: var(--text);
-    font-size: 0.95rem;
-}
-
-.ter-select-item {
-    display: block;
-    line-height: 1;
-}
-
+/* Notification / cart button group gap adjustment */
 .mh__rhs .block-rel {
     display: flex;
     align-items: center;
-    gap: 0.85rem;
+    gap: 8px;
 }
 
-.mh__rhs .block-rel>* {
-    min-width: 0;
-}
+/* =======================
+   Buttons
+======================= */
 
-.mh__cart-counter {
-    min-width: 1.35rem;
-    height: 1.35rem;
-    border-radius: 999px;
-    background: #ef4444;
-    color: white;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    padding: 0 0.25rem;
-}
-
-/* Header styling and layout (reordered for clarity)
-   Changes: rules reordered and duplicates merged. No property values changed. */
-
-.site-header {
-    background: #ffffff;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    position: sticky;
-    top: 0;
-    z-index: 50;
-}
-
-/* Header grid / regions */
-.mh__main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--spacing-md);
-    width: min(var(--max-width), calc(100% - 2rem));
-    margin: 0 auto;
-    padding: 1rem 0;
-}
-
-.mh__lhs,
-.mh__rhs,
-.mh__center {
-    display: flex;
-    align-items: center;
-    gap: 0.85rem;
-}
-
-.mh__lhs,
-.mh__rhs {
-    flex: 0 0 auto;
-}
-
-.mh__lhs {
-    justify-content: flex-start;
-    min-width: 0;
-}
-
-.mh__center {
-    flex: 1;
-    justify-content: center;
-    min-width: 0;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.mh__rhs {
-    justify-content: flex-end;
-}
-
-/* Logo */
-.mh__logo {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.2rem 0;
-    margin: 0 1rem;
-}
-
-.mh__logo svg {
-    display: block;
-    width: 151px;
-    height: auto;
-}
-
-/* Buttons and controls */
 .mh__button {
-    width: 2.75rem;
-    height: 2.75rem;
-    background: var(--surface-muted);
-    color: var(--text);
-    display: inline-flex;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
     align-items: center;
     justify-content: center;
+
+    background: #fff;
+    border-radius: 0;
+
+    cursor: pointer;
+    transition: .25s;
     position: relative;
 }
 
 .mh__button:hover {
-    transform: translateY(-1px);
-    background: rgba(15, 23, 42, 0.06);
-    border-color: rgba(15, 23, 42, 0.18);
+
+    background: #f6f6f6;
 }
+
+/* Menu icon */
 
 .mh__button--menu::before {
-    content: '';
-    display: block;
-    width: 1rem;
-    height: 0.12rem;
-    background: currentColor;
-    box-shadow: 0 0.22rem 0 0 currentColor, 0 -0.22rem 0 0 currentColor;
-}
 
-.mh__button--news {
-    position: relative;
-}
+    content: "";
 
-.mh__button--news::after {
-    content: attr(data-count);
-    position: absolute;
-    top: -0.35rem;
-    right: -0.35rem;
-    min-width: 1.25rem;
-    height: 1.25rem;
-    padding: 0 0.2rem;
-    border-radius: 999px;
-    background: #ef4444;
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.65rem;
-    font-weight: 700;
-}
-
-.mh__button--cart .mh__cart-counter {
-    position: absolute;
-    top: -0.35rem;
-    right: -0.35rem;
-}
-
-.mh__cart-counter {
-    min-width: 1.35rem;
-    height: 1.35rem;
-    border-radius: 999px;
-    background: #ef4444;
-    color: white;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.75rem;
-    padding: 0 0.25rem;
-}
-
-/* Small notification badge (separate from cart counter) */
-.notification-badge {
-    position: absolute;
-    top: -4px;
-    right: -4px;
     width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: #ff3b30;
-    color: #fff;
-    font-size: 10px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
+    height: 2px;
+
+    background: #111;
+
+    box-shadow:
+        0 6px #111,
+        0 -6px #111;
 }
 
-/* Icon sizing */
+/* Search icon */
+
 .icon {
     width: 22px;
     height: 22px;
-    display: block;
-    color: currentColor;
 }
 
-.mh__button:hover .icon {
-    color: #578F63;
-}
+/* =======================
+   Women / Men
+======================= */
 
-.mh__button:hover .icon-search {
-    color: #578F63;
-}
-
-/* Global context toggle (UX toggle) */
 global-ux-context-toggle {
+
     display: flex;
     align-items: center;
-    gap: 1rem;
-    letter-spacing: 0.22em;
-    font-weight: 700;
-    text-transform: uppercase;
+    gap: 22px;
 }
 
 global-ux-context-toggle a {
-    color: var(--text);
-    font-size: 0.92rem;
+
+    text-decoration: none;
+    color: #111;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    padding-bottom: 12px;
+
+    transition: .2s;
 }
 
-global-ux-context-toggle a:hover,
 global-ux-context-toggle a.active {
-    background: var(--text);
-    color: #ffffff;
+
+    border-bottom: 2px solid #111;
 }
 
-/* Region/model controls */
-globalization-toggle,
-.ter-toggle,
-.mh__model-select {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    border: 1px solid rgba(15, 23, 42, 0.12);
-    color: var(--text);
-    font-size: 0.95rem;
+global-ux-context-toggle a:hover {
+
+    border-bottom: 2px solid #111;
 }
 
-.ter-select-item {
-    display: block;
-    line-height: 1;
-}
+/* =======================
+   Logo
+======================= */
 
-.mh__rhs .block-rel {
+.mh__logo {
+
     display: flex;
     align-items: center;
-    gap: 0.85rem;
+    justify-content: center;
+
+    margin: 0 30px;
 }
 
-.mh__rhs .block-rel>* {
-    min-width: 0;
+.mh__logo svg {
+
+    width: 150px;
+    height: auto;
+    display: block;
 }
 
-/* Footer logo (kept here for convenience) */
-.footer-logo {
-    width: 130px;
-    align-items: left;
+/* =======================
+   Currency
+======================= */
+
+globalization-toggle {
+
+    width: 92px;
+    height: 46px;
+
+    border: 1px solid #e6e6e6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15px;
+    cursor: pointer;
 }
 
-/* Responsive adjustments */
-@media (max-width: 960px) {
-    .mh__main {
-        padding: 0.85rem 0;
-        gap: 0.75rem;
+/* =======================
+   Device Dropdown
+======================= */
+
+.mh__model-select {
+
+    width: 220px;
+    height: 46px;
+
+    border: 1px solid #e6e6e6;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+/* =======================
+   Notification Badge
+======================= */
+
+.notification-badge {
+
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #ff3b30;
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cart Counter */
+
+.mh__cart-counter {
+
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #ff3b30;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =======================
+   Navigation
+======================= */
+
+.main-nav {
+
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 34px;
+
+    border-top: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+
+    background: #fff;
+}
+
+.main-nav a {
+
+    text-decoration: none;
+
+    color: #111;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    transition: .2s;
+}
+
+.main-nav a:hover {
+
+    color: #666;
+}
+
+/* =======================
+   Responsive
+======================= */
+
+@media(max-width:1200px) {
+
+    .mh__model-select {
+        display: none;
     }
+
+    .main-nav {
+        overflow: auto;
+        justify-content: flex-start;
+        padding: 0 20px;
+    }
+}
+
+@media(max-width:992px) {
 
     .mh__center {
-        order: 3;
-    }
-
-    .mh__lhs,
-    .mh__rhs {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 760px) {
-    .mh__main {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0.75rem 0;
-    }
-
-    .mh__logo {
-        margin: 0;
-    }
-
-    .mh__lhs,
-    .mh__rhs,
-    .mh__center {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .mh__center {
-        order: 2;
-    }
-
-    .mh__lhs {
-        order: 1;
-    }
-
-    .mh__rhs {
-        order: 3;
+        gap: 20px;
     }
 
     global-ux-context-toggle {
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none;
+    }
+
+    .mh__logo {
+        margin: auto;
+    }
+}
+
+@media(max-width:768px) {
+
+    .mh__main {
+
+        height: 70px;
+        padding: 0 12px;
+    }
+
+    globalization-toggle,
+    .mh__model-select {
+
+        display: none;
+    }
+
+    .main-nav {
+
+        justify-content: flex-start;
+        overflow-x: auto;
+        gap: 20px;
+    }
+
+    .main-nav::-webkit-scrollbar {
+        display: none;
     }
 }
